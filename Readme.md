@@ -8,12 +8,12 @@ boundaries and may not provide continuous real-time communication between vessel
 heartbeat-based vessel monitoring mechanism using a CubeSat communication concept.
 
 # Problem Statement
-      Maritime monitoring systems like Geofence alert systems primarily depend on AIS (Automatic Identification System) Geofencing and Radar surveillance.
-      Here the Limitations are 
+Maritime monitoring systems like Geofence alert systems primarily depend on AIS (Automatic Identification System) Geofencing and Radar surveillance.
+Here the Limitations are 
             AIS can be manually switched OFF.
             Geofence alerts only trigger after boundary violations.
             Continuous vessel-to-shore communication is not always available.
-             Sinking vessels may lose communication completely.
+            Sinking vessels may lose communication completely.
 
 As a result, vessels engaged in illegal activities may become invisible to authorities.
 
@@ -62,9 +62,20 @@ Receives vessel status messages from CubeSat.
 
 # Working Principle
 
-      The proposed CubeSat-Based Dark Vessel Detection System operates using a heartbeat communication mechanism between a vessel, a CubeSat, and a ground station. The vessel node, equipped with an Arduino UNO and an NRF24L01 transceiver, continuously transmits heartbeat signals at regular intervals. These heartbeat messages indicate that the vessel is active and operating normally. The CubeSat node receives these signals through its NRF24L01 module and verifies the presence of the vessel. As long as heartbeat packets are received within the expected time period, the CubeSat forwards a status message such as "VESSEL ALIVE" to the ground station, providing continuous monitoring of vessel activity. Additionally, the CubeSat prototype uses an MPU6050 sensor to determine its orientation parameters, including roll, pitch, and yaw, simulating the attitude monitoring function of an actual satellite.
+      The proposed CubeSat-Based Dark Vessel Detection System operates using a heartbeat communication mechanism between a vessel, a CubeSat, and a ground 
+      station. The vessel node, equipped with an Arduino UNO and an NRF24L01 transceiver, continuously transmits heartbeat signals at regular intervals. These 
+      heartbeat messages indicate that the vessel is active and operating normally. The CubeSat node receives these signals through its NRF24L01 module and 
+      verifies the presence of the vessel. As long as heartbeat packets are received within the expected time period, the CubeSat forwards a status message 
+      such as "VESSEL ALIVE" to the ground station, providing continuous monitoring of vessel activity. Additionally, the CubeSat prototype uses an MPU6050 
+      sensor to determine its orientation parameters, including roll, pitch, and yaw, simulating the attitude monitoring function of an actual satellite.
 
-      If the CubeSat does not receive heartbeat signals from a vessel(means microcontroller at vessal side is switched off) for a predefined timeout period, it assumes that communication with the vessel has been lost. This loss of communication may be due to illegal activities such as unauthorized fishing, intentional disabling of the transmitter, equipment failure, or even a vessel sinking incident. In such cases, the CubeSat classifies the vessel as a Dark Vessel and immediately transmits an alert message to the ground station. The ground station then displays a warning indicating that the vessel is no longer transmitting its heartbeat signal and may require further investigation. By continuously monitoring heartbeat transmissions rather than relying solely on geofence violations, the proposed system enables near real-time detection of dark vessels and improves maritime surveillance, safety, and security.
+      If the CubeSat does not receive heartbeat signals from a vessel(means microcontroller at vessal side is switched off) for a predefined timeout period, it 
+      assumes that communication with the vessel has been lost. This loss of communication may be due to illegal activities such as unauthorized fishing, 
+      intentional disabling of the transmitter, equipment failure, or even a vessel sinking incident. In such cases, the CubeSat classifies the vessel as a 
+      Dark Vessel and immediately transmits an alert message to the ground station. The ground station then displays a warning indicating that the vessel is no 
+      longer transmitting its heartbeat signal and may require further investigation. By continuously monitoring heartbeat transmissions rather than relying 
+      solely on geofence violations, the proposed system enables near real-time detection of dark vessels and improves maritime surveillance, safety, and 
+      security.
 
 # Circuit Connections
 # Vessel Node
