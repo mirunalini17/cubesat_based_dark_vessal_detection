@@ -1,13 +1,11 @@
 # CubeSat-Based Dark Vessel Detection System
 
 # Overview
-      This project presents a prototype of a CubeSat-Based Dark Vessel Detection System designed to identify vessels that stop transmitting their status signals while operating at sea.
-      
-      Illegal fishing, unauthorized maritime activities, vessel hijacking, and sinking incidents often involve the intentional or accidental loss of communication with monitoring authorities.
-      
-      Traditional geofence-based monitoring systems only generate alerts when a vessel crosses predefined boundaries and may not provide continuous real-time communication between vessels and shore stations.
-      
-      To address this limitation, our system introduces a heartbeat-based vessel monitoring mechanism using a CubeSat communication concept.
+This project presents a prototype of a CubeSat-Based Dark Vessel Detection System designed to identify vessels that stop transmitting their status signals 
+while operating at sea.Illegal fishing, unauthorized maritime activities, vessel hijacking, and sinking incidents often involve the intentional or accidental 
+loss of communication with monitoring authorities.Traditional geofence-based monitoring systems only generate alerts when a vessel crosses predefined 
+boundaries and may not provide continuous real-time communication between vessels and shore stations.To address this limitation, our system introduces a 
+heartbeat-based vessel monitoring mechanism using a CubeSat communication concept.
 
 # Problem Statement
       Maritime monitoring systems like Geofence alert systems primarily depend on AIS (Automatic Identification System) Geofencing and Radar surveillance.
@@ -143,8 +141,9 @@ Actual CubeSat deployment.
 Cloud-based maritime dashboard.
 
 # Conclusion
-
-    This project demonstrates a CubeSat-inspired maritime monitoring system capable of detecting dark vessels through heartbeat signal monitoring. By continuously verifying vessel activity and generating alerts when communication is lost, the system provides a low-cost and scalable approach for enhancing maritime safety, surveillance, and illegal activity detection.
+This project demonstrates a CubeSat-inspired maritime monitoring system capable of detecting dark vessels through heartbeat signal monitoring.
+By continuously verifying vessel activity and generating alerts when communication is lost, the system provides a low-cost and scalable approach for enhancing 
+maritime safety, surveillance, and illegal activity detection.
 
 
 
